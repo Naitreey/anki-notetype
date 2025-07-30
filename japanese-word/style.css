@@ -1,4 +1,5 @@
-@import url("_ajt_japanese_24.10.8.1.css");
+@charset "UTF-8";
+@import url("_ajt_japanese_25.4.30.1.css");
 /* use gentium plus font included in my Anki collection. */
 @font-face {
     font-family: "Gentium Plus embedded";
