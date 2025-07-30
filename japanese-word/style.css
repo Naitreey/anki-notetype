@@ -1,0 +1,222 @@
+@import url("_ajt_japanese_24.10.8.1.css");
+/* use gentium plus font included in my Anki collection. */
+@font-face {
+    font-family: "Gentium Plus embedded";
+    font-style: normal;
+    font-weight: normal;
+    src: url("_GentiumPlus-Regular.ttf") format("truetype");
+}
+
+/* embed an old version (2016) of YuKyokasho Yoko font (specifically renamed to
+distinguish with system version) to be used below */
+@font-face {
+    font-family: "YuKyokasho Yoko embedded";
+    font-style: normal;
+    font-weight: normal;
+    src: url("_YuKyokashoYokoAnki-Medium.ttf") format("truetype");
+}
+
+/* embed a Mincho font for android */
+@font-face {
+    font-family: "Zen Old Mincho";
+    font-style: normal;
+    font-weight: 900;
+    src: url("_ZenOldMincho-Black.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Zen Old Mincho";
+    font-style: normal;
+    font-weight: 700;
+    src: url("_ZenOldMincho-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Zen Old Mincho";
+    font-style: normal;
+    font-weight: 600;
+    src: url("_ZenOldMincho-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Zen Old Mincho";
+    font-style: normal;
+    font-weight: 500;
+    src: url("_ZenOldMincho-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Zen Old Mincho";
+    font-style: normal;
+    font-weight: 400;
+    src: url("_ZenOldMincho-Regular.ttf") format("truetype");
+}
+
+.card {
+    font-family: Arial, Helvetica, "Hiragino Sans GB", "Hiragino Sans", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
+.word {
+    font-size: 30px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.mac .ja {
+    /* font-family: "Hiragino Mincho ProN"; */
+    font-family: "YuKyokasho Yoko";
+}
+
+.mac .ja.pitch-accent {
+    /* only this font correctly handles the spacing issue of ligatures */
+    font-family: "Hiragino Mincho ProN";
+}
+
+.mac .word {
+    font-size: 35px;
+}
+
+.mobile .ja {
+    font-family: "Hiragino Mincho ProN";
+}
+
+.android .ja {
+    font-family: "Zen Old Mincho";
+}
+
+.ja-handwriting {
+    font-size: 100px;
+    font-family: "YuKyokasho Yoko";
+    font-weight: normal;
+}
+
+/* use embedded YuKyokasho Yoko font for handwriting kanji on iOS, because Apple
+is a fucking dick who doesn't let me use the system YuKyokasho Yoko font (which
+is already available on iOS) as on macOS.
+*/
+.mobile .ja-handwriting {
+    font-size: 100px;
+    font-family: "YuKyokasho Yoko embedded";
+    font-weight: normal;
+}
+
+.text-section {
+    border: 1px dashed;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+legend {
+    text-align: left;
+    font-size: 12px;
+}
+
+img {
+    max-height: 50vh;
+}
+
+/* create a fancy <hr> */
+hr#answer {
+    border-style: double none none;
+    border-top: medium double;
+    /* prevent § from being clipped */
+    overflow: visible;
+    text-align: center;
+    padding: 0;
+    background-color: inherit;
+    margin-top: 2em;
+}
+
+hr#answer::after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -1.0em;
+    padding: 0 2px;
+    font-size: 0.8em;
+    /* set background color explicitly to match that of card, because
+    default is transparent, which makes the character cuts through <hr> line.
+     */
+    background-color: white;
+}
+
+.nightMode hr#answer::after {
+    background-color: rgb(47, 47, 49);
+}
+
+.pronunciation {
+    font-size: 20px;
+}
+
+.ipa {
+    font-family: "Gentium Plus embedded";
+}
+
+/* AnkiMobile by default didn't style replay button exactly the same as desktop */
+.replay-button {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.ipa {
+    padding: 0 10px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+    margin: auto;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.nightMode table {
+    border: 2px solid white;
+}
+
+.nightMode :is(th, td) {
+    border: 1px solid white;
+}
+
+.current-cloze {
+    color: blue;
+    font-weight: bold;
+}
+
+.other-cloze {
+    color: grey;
+}
+
+#cloze {
+    visibility: hidden;
+}
+
+#cloze.show {
+    visibility: visible;
+}
+
+ol, ul {
+    display: table;
+    margin: 0 auto;
+}
+
+.conjugation-details > table {
+    margin-top: 10px;
+}
+
+.emoji {
+    position: absolute;
+}
+
+.sentence {
+    vertical-align: middle;
+}
