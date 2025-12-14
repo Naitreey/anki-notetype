@@ -260,12 +260,38 @@ distinguish with system version) to be used below */
     src: url("_ZenOldMincho-Regular.ttf") format("truetype");
 }
 
+:root {
+    /* Prevent layout shifts when scrolling shows up. */
+    scrollbar-gutter: stable;
+}
+
 .card {
     font-family: Arial, Helvetica, "Hiragino Sans GB", "Hiragino Sans", sans-serif;
     font-size: 25px;
     text-align: center;
     color: black;
+}
+
+.card {
+    background-attachment: fixed, fixed;
+    background-clip: border-box, border-box;
+    background-origin: border-box, border-box;
+    background-image:
+        radial-gradient(ellipse at center, rgb(255 255 255 / 1.0) 0%, rgb(255 255 255 / 0.85) 100%),
+        url("_the_school_of_athens.jpg");
+    background-position: initial, center;
+    background-repeat: initial, no-repeat;
+    background-size: auto auto, cover;
+    /* fallback background color if image is not loaded */
     background-color: white;
+}
+
+.card.nightMode {
+    background-image:
+        radial-gradient(ellipse at center, rgb(0 0 0 / 0.9) 0%, rgb(0 0 0 / 0.4) 100%),
+        url("_milky_way_night_grassland.jpg");
+    /* fallback background color if image is not loaded */
+    background-color: black;
 }
 
 .word {
@@ -313,15 +339,18 @@ is already available on iOS) as on macOS.
 }
 
 .text-section {
-    border: 1px dashed;
-    border-radius: 10px;
+    border: 1px solid gray;
+    border-radius: 7px;
     padding: 10px;
     margin: 10px 0;
 }
 
 legend {
+    color: white;
     text-align: left;
     font-size: 12px;
+    background-color: black;
+    border: 1px solid black;
 }
 
 img {
