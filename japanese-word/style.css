@@ -279,9 +279,9 @@ distinguish with system version) to be used below */
     background-image:
         radial-gradient(ellipse at center, rgb(255 255 255 / 1.0) 0%, rgb(255 255 255 / 0.85) 100%),
         url("_the_school_of_athens.jpg");
-    background-position: initial, center;
-    background-repeat: initial, no-repeat;
-    background-size: auto auto, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
     /* fallback background color if image is not loaded */
     background-color: white;
 }
