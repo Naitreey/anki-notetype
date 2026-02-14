@@ -1,0 +1,18 @@
+/* @charset "UTF-8";
+@import url("_ajt_japanese_25.4.30.1.css"); */
+.card {
+    font-family: arial;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
+.tags {
+    float: inline-start;
+}
+
+.question {
+    clear: both;
+}
